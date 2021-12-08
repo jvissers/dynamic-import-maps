@@ -1,0 +1,25 @@
+{
+  "name": "@tangelo/dynamic",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "copy": "copyfiles -V ./dist/extension-dynamic.esm.js ../../remote-extensions/dynamic"
+  },
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/extension-dynamic.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/extension-dynamic.esm.js"
+    }
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2",
+    "vite": "^2.7.1"
+  },
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}

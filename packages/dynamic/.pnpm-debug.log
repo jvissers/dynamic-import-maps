@@ -1,0 +1,15 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "fileName": "/home/jvissers/Projects/experiments/dynamic-import-maps/packages/dynamic/package.json",
+    "code": "ERR_PNPM_JSON_PARSE",
+    "err": {
+      "name": "pnpm",
+      "message": "Unexpected end of JSON input while parsing empty string in /home/jvissers/Projects/experiments/dynamic-import-maps/packages/dynamic/package.json",
+      "code": "ERR_PNPM_JSON_PARSE",
+      "stack": "pnpm: Unexpected end of JSON input while parsing empty string in /home/jvissers/Projects/experiments/dynamic-import-maps/packages/dynamic/package.json\n    at parseJson (/home/jvissers/.nvm/versions/node/v14.18.1/pnpm-global/5/node_modules/.pnpm/pnpm@6.23.2/node_modules/pnpm/dist/pnpm.cjs:3118:27)\n    at readJsonFile (/home/jvissers/.nvm/versions/node/v14.18.1/pnpm-global/5/node_modules/.pnpm/pnpm@6.23.2/node_modules/pnpm/dist/pnpm.cjs:43000:42)\n    at async Object.tryReadProjectManifest (/home/jvissers/.nvm/versions/node/v14.18.1/pnpm-global/5/node_modules/.pnpm/pnpm@6.23.2/node_modules/pnpm/dist/pnpm.cjs:43061:32)\n    at async tryReadProjectManifest (/home/jvissers/.nvm/versions/node/v14.18.1/pnpm-global/5/node_modules/.pnpm/pnpm@6.23.2/node_modules/pnpm/dist/pnpm.cjs:43279:60)\n    at async handler (/home/jvissers/.nvm/versions/node/v14.18.1/pnpm-global/5/node_modules/.pnpm/pnpm@6.23.2/node_modules/pnpm/dist/pnpm.cjs:117350:48)\n    at async /home/jvissers/.nvm/versions/node/v14.18.1/pnpm-global/5/node_modules/.pnpm/pnpm@6.23.2/node_modules/pnpm/dist/pnpm.cjs:134189:20\n    at async run (/home/jvissers/.nvm/versions/node/v14.18.1/pnpm-global/5/node_modules/.pnpm/pnpm@6.23.2/node_modules/pnpm/dist/pnpm.cjs:134163:34)\n    at async runPnpm (/home/jvissers/.nvm/versions/node/v14.18.1/pnpm-global/5/node_modules/.pnpm/pnpm@6.23.2/node_modules/pnpm/dist/pnpm.cjs:134375:5)\n    at async /home/jvissers/.nvm/versions/node/v14.18.1/pnpm-global/5/node_modules/.pnpm/pnpm@6.23.2/node_modules/pnpm/dist/pnpm.cjs:134367:7"
+    }
+  }
+}

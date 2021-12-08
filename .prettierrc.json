@@ -1,0 +1,28 @@
+{
+  "printWidth": 120,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "options": {
+        "trailingComma": "all"
+      }
+    },
+    {
+      "files": ["*.json"],
+      "options": {
+        "parser": "json",
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": ["package.json"],
+      "options": {
+        "parser": "json-stringify",
+        "printWidth": 0,
+        "useTabs": false
+      }
+    }
+  ]
+}
