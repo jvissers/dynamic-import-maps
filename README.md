@@ -88,3 +88,35 @@ Steps to reproduce:
 **Update December 9th** - tried to do something similar with a module other than moment, which has ES6 support.
 In this case used `lodash-es` and found that this works when using Google Chrome and a `production` preview build.
 No luck using Chrome dev mode, nor FF - which still give me the same issue as reported earlier.
+
+**Update December 9th** - earlier attempts used `polyfill` mode for the `es-module-shim`.
+In a new attempt `shim mode` was attempted, with again showed different results.
+Using this mode `dev mode` works in both Chrome (Edge) and FF - so that is good!
+However, when doing a `npm run build` the following is displayed:
+
+```
+*[feature/shimmode][~/Projects/experiments/dynamic-import-maps]$ pnpm run build  
+
+> dynamic-import-maps@0.0.0 build /home/jvissers/Projects/experiments/dynamic-import-maps
+> tsc && vite build
+
+vite v2.7.1 building for production...
+<script src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="/src/main.ts"> in "/index.html" can't be bundled without type="module" attribute
+✓ 1 modules transformed.
+Generated an empty chunk: "index"
+dist/assets/favicon.17e50649.svg   1.49 KiB
+dist/index.html                    0.62 KiB
+```
+
+So as a result, the production `preview` does not return the correct result (for neither Chrome, nor FF).
+Instead the following is displayed in the console:
+
+```
+VM48:1 GET http://localhost:5000/src/main.ts 404 (Not Found)
+es-module-shims.js:574 Uncaught Error: 404 Not Found http://localhost:5000/src/main.ts
+    at doFetch (es-module-shims.js:574)
+    at async es-module-shims.js:624
+    at async loadAll (es-module-shims.js:330)
+    at async topLevelLoad (es-module-shims.js:397)
+```
