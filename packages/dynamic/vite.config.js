@@ -10,10 +10,10 @@ export default defineConfig({
       fileName: (format) => `extension-dynamic.${format}m.js`
     },
     rollupOptions: {
-      external: ['moment'],
+      external: ['lodash-es'],
       output: {
         globals: {
-          'moment': 'moment'
+          'lodash-es': 'lodash-es'
         }
       }
     }

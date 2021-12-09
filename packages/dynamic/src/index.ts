@@ -1,3 +1,3 @@
-import { now } from './dynamic';
+import { hasIt } from './dynamic';
 
-export default now;
+export default hasIt;

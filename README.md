@@ -1,5 +1,7 @@
 # vitejs, dynamic imports and import maps
 
+(See recent updates at the end of this file)
+
 In this project some experiments are done with the following concepts:
 
 - dynamic imports
@@ -80,3 +82,9 @@ Steps to reproduce:
       **At the same time the network tab actually shows that resolution seems to work** (but not really) \
       ![Google Chrome network tab, import maps](google-chrome-import-maps-preview.png)
     - in FF this will (again) result in the same error as is shown for FF at nr. 4
+
+## Recent Updates
+
+**Update December 9th** - tried to do something similar with a module other than moment, which has ES6 support.
+In this case used `lodash-es` and found that this works when using Google Chrome and a `production` preview build.
+No luck using Chrome dev mode, nor FF - which still give me the same issue as reported earlier.
