@@ -120,3 +120,8 @@ es-module-shims.js:574 Uncaught Error: 404 Not Found http://localhost:5000/src/m
     at async loadAll (es-module-shims.js:330)
     at async topLevelLoad (es-module-shims.js:397)
 ```
+
+What I'm also noticing in this setup is that the same material gets loaded twice.
+Once by the main application that is transformed by vitejs (for imports) and
+once as a result of the `importmap` declaration, through the CDN.
+Please see the excerpt of the screenshot ![screenshot](es-module-shim-mode-loads-a-lot.png).
